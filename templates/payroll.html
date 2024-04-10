@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Management</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Poppins", sans-serif;
+        }
+        .w3-table-all:not(.w3-hoverable) tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-container" style="padding-top: 22px;">
+    <h2>Payroll Management</h2>
+    <p>Manage and view payroll information for all employees.</p>
+    <table class="w3-table-all">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Pay Period</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10001</td>
+                <td>John Doe</td>
+                <td>Software Developer</td>
+                <td>$5000</td>
+                <td>Monthly</td>
+                <td>
+                    <button class="w3-button w3-blue w3-small">Edit</button>
+                    <button class="w3-button w3-red w3-small">Delete</button>
+                </td>
+            </tr>
+            <!-- Repeat rows for each employee -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

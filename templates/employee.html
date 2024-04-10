@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .employee-card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            border-radius: 5px; /* 5px rounded corners */
+        }
+        .employee-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-container">
+    <h2>Employee Directory</h2>
+    <div class="search-container">
+        <input type="text" id="employeeSearch" onkeyup="searchEmployees()" placeholder="Search for names or departments.." title="Type in a name or department">
+    </div>
+    <div class="employee-grid" id="employeeGrid">
+        <!-- Example Employee Card -->
+        <div class="employee-card">
+            <img src="employee_photo.jpg" alt="John Doe" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4> 
+                <p>Web Developer, IT Department</p> 
+            </div>
+        </div>
+        <!-- Additional employee cards will be added here -->
+    </div>
+</div>
+
+<script>
+// Placeholder for searchEmployees function. You'll need to implement this with JavaScript.
+function searchEmployees() {
+    console.log("Searching..."); // Implement AJAX call to filter and update employee cards based on search input.
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        function searchDocuments() {
+            // JavaScript for search functionality
+            let input = document.getElementById('searchInput').value.toUpperCase();
+            let table = document.getElementById("documentsTable");
+            let tr = table.getElementsByTagName("tr");
+
+            for (let i = 0; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    let textValue = td.textContent || td.innerText;
+                    if (textValue.toUpperCase().indexOf(input) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="w3-container" style="padding-top: 22px;">
+    <h2>Documents</h2>
+    <input type="text" id="searchInput" onkeyup="searchDocuments()" placeholder="Search for documents..." title="Type in a name">
+
+    <table class="w3-table-all" id="documentsTable">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>Title</th>
+                <th>Description</th>
+                <th>File Size</th>
+                <th>Last Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Employee Handbook</td>
+                <td>A comprehensive guide for new employees.</td>
+                <td>1.2 MB</td>
+                <td>2023-01-15</td>
+            </tr>
+            <!-- Repeat rows for each document -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
